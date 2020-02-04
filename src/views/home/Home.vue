@@ -6,26 +6,59 @@
     <!--推荐-->
     <home-recommend-view :recommends="recommends" />
     <feature/>
-    
+    <tab-control class="tab-control" :titles="['流行','新款','精选']"></tab-control>
+    <ul>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+      <li>li</li>
+    </ul>
 
   </div>
 
 </template>
 
 <script>
-  import NavBar from 'components/common/navbar/NavBar'
+
   import HomeSwiper from './childrenCompents/HomeSwiper'
   import HomeRecommendView from './childrenCompents/HomeRecommendView'
   import Feature from './childrenCompents/FeatureView'
+
+  import NavBar from 'components/common/navbar/NavBar'
+  import TabControl from 'components/content/tabcontrol/TabControl'
   import {getHomeMultidata} from "network/home";
 
   export default {
     name: "Home",
     components:{
       HomeSwiper,
-      NavBar,
       HomeRecommendView,
-      Feature
+      Feature,
+      NavBar,
+      TabControl
     },
     data(){
       return{
@@ -58,4 +91,9 @@
   top: 0;
   z-index: auto;
 }
+  .tab-control{
+    position: sticky;
+    top:44px;
+  }
+
 </style>
