@@ -1,7 +1,10 @@
 <template>
   <div id="home">
     <nav-bar class="home-nav"><div slot="center">购物街</div></nav-bar>
+    <!--轮播图-->
    <home-swiper :banners="banners" />
+    <!--推荐-->
+    <home-recommend-view :recommends="recommends" />
   </div>
 
 </template>
@@ -9,15 +12,15 @@
 <script>
   import NavBar from 'components/common/navbar/NavBar'
   import HomeSwiper from './childrenCompents/HomeSwiper'
+  import HomeRecommendView from './childrenCompents/HomeRecommendView'
   import {getHomeMultidata} from "network/home";
-  import {Swiper,SwiperItem} from "components/common/swiper"
+
   export default {
     name: "Home",
     components:{
       HomeSwiper,
       NavBar,
-      Swiper,
-      SwiperItem
+      HomeRecommendView
     },
     data(){
       return{
